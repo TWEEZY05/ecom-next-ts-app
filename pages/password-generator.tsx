@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import styles from "./PasswordGenerator.module.scss"; // Импортируйте стили
+import PasswordGenerator from "../components/PasswordGenerator";
 
-const Generator = () => {
-  return <div>Generator</div>;
+const PasswordGeneratorPage = () => {
+  return <PasswordGenerator />;
 };
 
-export default Generator;
+export const getStaticProps = () => {
+  return {
+    props: {
+      pageTitle: "Генератор паролей",
+    },
+  };
+};
+
+export default PasswordGeneratorPage;

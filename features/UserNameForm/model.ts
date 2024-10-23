@@ -23,6 +23,9 @@ export const UseUserNameForm = () => {
     const onValidSubmit = (data: { name: string }) => {
       localStorage.setItem("name", data.name);
       setName(data.name);
+
+      // Программно вызываем событие storage, чтобы обновления срабатывали мгновенно
+      window.dispatchEvent(new Event("storage"));
     };
 
     if (inputName) {
@@ -32,7 +35,6 @@ export const UseUserNameForm = () => {
 
   return {
     inputName,
-
     handleSubmit,
     register,
     errors,

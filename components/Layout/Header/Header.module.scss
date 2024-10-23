@@ -1,0 +1,67 @@
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.container {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 68px;
+}
+
+.pageTitle {
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 46px;
+}
+
+.pageTitle {
+    color: #3b75a2;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #3b75a2;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #3b75a2;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.initials {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3b75a2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.userName {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
