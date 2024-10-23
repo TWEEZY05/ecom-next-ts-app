@@ -1,0 +1,115 @@
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 10px;
+}
+.container {
+    position: relative;
+    border: 1px solid #dee2e6;
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 8px;
+    box-shadow:
+        0px 20px 20px 0px #00000014,
+        0px 0px 2px 0px #0000001f;
+
+    background-color: #fff;
+}
+
+.closeModal {
+    top: 10px;
+    right: 9.41px;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    padding: 4px;
+    background: #e5e5e5;
+    border-radius: 29px;
+    gap: 10px;
+    cursor: pointer;
+}
+.closeModal:before,
+.closeModal:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 15px;
+    height: 2px;
+    background: #4f4f4f;
+}
+
+.closeModal:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.closeModal:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 24.2px;
+}
+.subTitle {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 24px;
+}
+.input {
+    width: 100%;
+    padding: 16px 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    line-height: 16.94px;
+    &::placeholder {
+        font-size: 14px;
+        color: #acacac;
+    }
+    // margin-bottom: 36px;
+    &.error {
+        border-color: red;
+    }
+}
+.error {
+    color: red;
+    font-size: 11px;
+    margin-top: 1px;
+    margin-top: 4px; /* Увеличьте отступ сверху, чтобы текст ошибки не прижимался к инпуту */
+}
+
+.btnContainer {
+    margin-top: 36px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 13.5px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #f5f5f5;
+    background-color: #3b75a2;
+    border: none;
+}
