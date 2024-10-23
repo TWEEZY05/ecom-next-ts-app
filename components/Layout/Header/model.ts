@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 
 export const useHeader = () => {
-  const [userName, setUserName] = useState<string>("Гость");
-  const [initials, setInitials] = useState<string>("Г");
+  const [userName, setUserName] = useState<string>("Ваше имя");
+  const [initials, setInitials] = useState<string>("В");
 
   const updateUserName = () => {
-    const storedName = localStorage.getItem("name") || "Гость";
+    let storedName = localStorage.getItem("name") || "Ваше имя";
+    storedName =
+      storedName.charAt(0).toUpperCase() + storedName.slice(1).toLowerCase();
+
     setUserName(storedName);
     setInitials(storedName.charAt(0).toUpperCase());
   };
