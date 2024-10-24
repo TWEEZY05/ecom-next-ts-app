@@ -1,7 +1,8 @@
 import React from "react";
+import CalculatorCard from "../components/CalculatorCard";
 
 const Calculator = () => {
-  return <div>Calculator</div>;
+  return <CalculatorCard />;
 };
 
 export const getStaticProps = () => {

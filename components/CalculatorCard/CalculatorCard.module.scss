@@ -1,0 +1,61 @@
+.container {
+    height: 707px;
+    margin: 0 auto;
+    width: 438px;
+    border-radius: 6px;
+    background-color: #f1f2f3;
+    font-family: "Work Sans";
+    padding: 42px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.inputValues {
+    font-size: 40px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.input {
+    font-size: 96px;
+    font-weight: 200;
+}
+
+.padContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    width: 100%;
+}
+
+.leftPadContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.topOperators {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.numPad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px;
+}
+
+.rightOperatorsPad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px; 
+    align-items: center;
+}

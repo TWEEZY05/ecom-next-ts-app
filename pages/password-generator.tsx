@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import styles from "./PasswordGenerator.module.scss"; // Импортируйте стили
+import React from "react";
 import PasswordGenerator from "../components/PasswordGenerator";
 
 const PasswordGeneratorPage = () => {
