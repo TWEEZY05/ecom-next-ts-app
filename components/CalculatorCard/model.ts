@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useCalculatorCard = () => {
   const [exp, setExp] = useState<string>("");
@@ -55,6 +55,35 @@ export const useCalculatorCard = () => {
       }
     }
   };
+
+  // Ввод с клавиатуры
+  const handleKeyPress = (event: KeyboardEvent) => {
+    const key = event.key;
+
+    if (/\d/.test(key)) {
+      // Если нажата цифра
+      handleClick(key);
+    } else if (["+", "-", "*", "/"].includes(key)) {
+      // Если нажаты операторы
+      handleClick(key);
+    } else if (key === "Enter") {
+      // Если нажата клавиша Enter
+      handleClick("=");
+    } else if (key === "Backspace") {
+      // Если нажата клавиша Backspace
+      handleClick("del");
+    } else if (key === "Escape") {
+      handleClick("C");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [exp, result, isEvaluated]);
 
   return {
     exp,
